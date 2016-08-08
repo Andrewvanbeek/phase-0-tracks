@@ -16,4 +16,4 @@ A commit can be thought of as a save point for our work, for us to later refer t
 
 * What is a merge conflict?
 
-A merge conflict is a conflict when changes from two different branches or users conflict each other and merged at the same time.  An example is if two different team members were working on the same document and for some reason they edited the same line and git would not know who was correct.
+A merge conflict is a conflict when changes from two different branches or users conflict each other and merged at the same time.  An example is if two different team members were working on the same document and for some reason they edited the same line and git would not know who was correct!
