@@ -11,12 +11,33 @@ External style sheet
 Internal style sheet
 Inline style
 
-An external Style sheet is the best be
+An external Style sheet is the best to link a css sheet.  Because it can a sheet that will make global changes to your website, so all your css can be contained in here.  Internal is more associated with one specific page and inline is specific to one element. 
 
 
 
 
 What is a selector? Give examples of at least three types of selectors.
+
+A css selector the part of css rule that allows you to select what element you want to stylize.  For example h1, body, p could all be selectors in css.
+
 What is the box model?
+
+The box model applies to how css wraps around html.  In the box model the html element’s content is wrapped firs in a box of padding, then a border, and then a margin.  All these different layers can be stylized.
+
 Explain and give an example of the cascading effect of CSS.
+
+
+64
+down vote
+accepted
+
+Cascading effect in CSS rule can to refer to a piece of HTML, there has multiple stylesheets that have multiple css rules that can refer the same element on a particular page.
+
+The css rule used on a particular element is chosen by cascading down from the more gwide-ranged rules to the specific rule required. The more specific rule is chosen, for example if there was a rules for h1 vs h1#idexample the rule for h1#idexample would win out if there was a piece of html that has <h1 id=“idexample”></h1>.
+
+
+
 Name two CSS techniques that assist in responsive design.
+
+
+Creating a responsive Grid view and Creating Media queries.
