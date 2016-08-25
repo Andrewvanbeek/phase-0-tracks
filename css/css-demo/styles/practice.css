@@ -1,0 +1,10 @@
+section#contact-info {font-size: .8em;}
+
+.job {background-color: #e9e5dc;
+border-radius: 25px;}
+
+.list {font-size: .8em;}
+
+section.job:hover {background: blue;}
+
+section.job h3 {color: gray;}

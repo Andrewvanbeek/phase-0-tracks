@@ -1,0 +1,19 @@
+h1 {color:blue;}
+
+main {margin: auto;}
+
+
+img#octopusbody 
+{ z-index: -50;
+	position: absolute;
+	margin-left: 500px;
+ }
+
+img#glasses { z-index: -40; position: absolute;  margin-left: 550px; margin-top: 100px;}
+
+img#hats {z-index: -30; position: absolute; margin-left: 485px; margin-top: -60px; } 
+
+
+
+
+z-index: -40; position: absolute; right: 1185px; bottom: 480px; margin-left: 500px;
