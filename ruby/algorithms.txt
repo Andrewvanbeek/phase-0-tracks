@@ -1,0 +1,29 @@
+-When in elevator and Human says number
+	If you hear any numbers that range from 1-200, repeat the response and confirm that is the proper number.  
+	When number is confirmed press corresponding number.
+
+When in elevator and Human does not say number.
+	-Ask "did you mean Garage, Basment or Lobby?  If not please reply with the proper floor number"
+	Confirm response.
+	If response is confirmed to be  "Garage" press the garage button.
+	If response is confirmed to be "Lobby" press the Lobby button.
+	If response is confirmed to be "Basement" press the basement button.
+	If it is a number, press the confirmed floor number.
+
+
+Make a sandwhich.  
+-When it is 12:00 am
+	-Enter Kitchen
+	-Open Fridge
+	-take slices of bread and fill it with tomatoes, lettuce, and bacon
+	-if no bacon use ham
+	-Place sandwhich on counter
+	-Say "sandwhich is ready"
+
+When materials are missing
+	-if no bread return with "error sandwhich materials are missing"
+
+
+
+
+
