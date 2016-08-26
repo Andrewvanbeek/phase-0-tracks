@@ -1,3 +1,12 @@
+puts "How many employees will be proccessed?"
+
+employees = gets.chomp.to_i
+
+reiterate = 0
+
+until reiterate == employees 
+
+
 puts "What is your name?"
 
 name = gets.chomp
@@ -26,14 +35,37 @@ puts "Would you like to enroll in the company’s health insurance? Yes or No?"
 
 hi = gets.chomp
 
-if agevsyob == true && bread == "yes"
-	puts "Probably not a vampire"
-elsif name = "Drake Cula"
-	puts "def a vampire"
-elsif (agevsyob == false && bread == "no") || hi == "no"  
+if name == "Drake Cula" || name == "Tu Fang"
+	puts "defintely a vampire"
+	reiterate += 1
+elsif(agevsyob == false && bread == "no") || hi == "no"  
 	puts "Probably a vampire"
-elsif name = "Drake Cula"
-	puts "def a vampire"
+	reiterate +=1
+elsif agevsyob == true && bread == "yes"
+	puts "Probably not a vampire"
+	reiterate += 1
 else
-	puts "results inconclusive"
+	puts "Results inconclusive"
+	reiterate += 1
+end
+
+allergy = "something"
+
+until allergy == "done".upcase || allergy == "sunshine".upcase
+
+puts "Do you have an allergy? If no write done."
+
+allergy = gets.chomp.upcase
+end
+
+if allergy == "done"
+	puts "thank you"
+elsif allergy == "sunshine".upcase
+	puts "Probably a vampire"
+else
+	puts "thank you"
+end
+
+Puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
+
 end
