@@ -1,0 +1,22 @@
+section.column-1 {
+ display:inline-block;
+    width: 50%;
+  
+}
+
+section.column-2 {
+float:right;
+    width:50%;
+    
+  
+}
+
+footer { 
+float:bottom;
+margin-top:20px;
+}
+
+body{
+  font-family:Georgia;
+  background-color:red;
+}
