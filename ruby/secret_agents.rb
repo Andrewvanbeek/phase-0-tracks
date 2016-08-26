@@ -39,6 +39,50 @@ var1 = str[0].index
 if var1 == "a"
 	var1 = index[25]
 elsif var1 == "b"
-	var 1
+	var1 = index[3]
+elsif var1 == "c"
+	var1 = index[4]
+elsif var1 == "d"
+	var1 = index[5]
+elsif var1 == "e"
+	var1 = index[6]
+elsif var1 == "f"
+	var1 = index[7]
+elsif var1 == "g"
+	var1 = index[8]
+elsif var1 == "h"
+	var1 = index[9]
+elsif var1 == "i"
+	var1 = index[10]
+elsif var1 == "j"
+	var1 = index[11]
+elsif var1 == "k"
+	var1 = index[12]
+elsif var1 == "l"
+	var1 = index[13]
+elsif var1 == "m"
+	var1 = index[14]
+elsif var1 == "p"
+	var1 = index[15]
+elsif var1 == "q"
+	var1 = index[16]
+elsif var1 == "r"
+	var1 = index[17]
+elsif var1 == "s"
+	var1 = index[18]
+elsif var1 == "t"
+	var1 = index[19]
+elsif var1 == "u"
+	var1 = index[20]
+elsif var1 == "v"
+	var1 = index[21]
+elsif var1 == "w"
+	var1 = index[22]
+elsif var1 == "x"
+	var1 = index[23]
+elsif var1 == "y"
+	var1 = index[24]
+elsif var1 == "z"
+	var1 = index[0]
 
 
