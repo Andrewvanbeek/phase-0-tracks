@@ -1,0 +1,46 @@
+Variables
+1. What is a variable? Why might a programmer use a variable?
+
+Variables are means to store a specific value of data while also labeling that values so you later reference in your ruby code.  A programmer might use a variable as way to easily reference a value multiple times.  For example if they want to reference the pi value of 3.14159265358979323846264338327950288419716939937510, they could just store in it a variable called pi (pi = 3.14159265358979323846264338327950288419716939937510).  Then call simply print the pi variable each time they wanted that value.
+   
+
+2. If the value of first_name is "Abraham" and last_name is "Lincoln", explain the order in which Ruby will run the line full_name = first_name + last_name, and what the final result will be.
+
+Ruby will add the variables within the full_name variable of the variables from left to right.  This will cause first_name to have last_name added to it resulting in “AbrahamLincoln” (there is no space within the strings).
+
+Data Types
+3. For each of the following data types, write a short definition and give at least one example of when you might use the data type in a program. (Don't use an example we've already provided.)
+
+string
+integer
+float
+nil
+boolean
+Algorithms
+4. What is an algorithm?
+
+5. What are two common categories of algorithm in computer science? 
+
+Methods
+6. What is a method? Why might a programmer choose to use a method?
+
+7. Define the following terms as they relate to a method. 
+
+return value
+side effect
+parameter
+argument
+implicit return
+8. What are global scope and method scope? How do those scopes impact the availability of data at different points in a program?
+
+Control Flow
+9. What is control flow? Why might a programmer choose to use flow control?
+
+10. Define the following terms as they relate to flow control.
+
+loop
+if
+else
+elsif
+while
+until
