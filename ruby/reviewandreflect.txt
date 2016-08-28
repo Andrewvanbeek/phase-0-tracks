@@ -11,12 +11,19 @@ Ruby will add the variables within the full_name variable of the variables from 
 Data Types
 3. For each of the following data types, write a short definition and give at least one example of when you might use the data type in a program. (Don't use an example we've already provided.)
 
-string
-integer
-float
-nil
-boolean
+string - is an object that holds arbitrary characters that are human readable.  They do not have distinct numeric value unless a specific method is run on them.  They are usually in “” for example “Hey!” is a string.  Could use if you were trying to print a message to a user like “Hello!”.
+
+integer - An integer is object with numeric value.  “5” would still be a string since is characters by quotes, but 5 is integer because it a number and it data with value that can be directly manipulated by math.  For example you could set a variable as the value of two integers added together like a = 5 +4.
+
+float-  A float is integer, but traditional integers end before the decimal mark making them whole numbers.  A float are integers that have the decimal such as 4.3, 0.2 and etc.  To change a normal integer or string with a number into a float, just use the .to_f command.  Makes sense if you are working with dollars 4.45 dollars for example.
+
+nil -  Is basically there is no value yet, but it can be more closely resembled to N/A.  You can not add or manipulate nil, it is more of a placeholder value, in that nil is not the same as 0 in terms of an integer, and is not the same as “” as a string.  
+
+boolean- Can be true or false.  For example a = false is a boolean.  Can have many applications for example as a means to keep a loop running: while x = false do xyz. 
+
+
 Algorithms
+
 4. What is an algorithm?
 
 5. What are two common categories of algorithm in computer science? 
