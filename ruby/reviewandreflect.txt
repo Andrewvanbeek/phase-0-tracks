@@ -72,6 +72,8 @@ if - Allows for a specific actions to be enacted if a certain condition is met. 
 
 else - Allows you to control the outcome if a non specific action was made, for example if the user did not do what you wanted.  Great for control flow because it can help account for human error.
 
-elsif
-while
-until
+elsif - Is a way to accommodate for multiple specific conditions, if one if statement is not enough.  For example if there are three specific inputs you want add for your flow control you first add a if, then two elsif statements and order them according to which one had the most priority.
+
+while - Is a loop that is useful to flow control because it allows for reiteration.  It basically says while variable_1 is x keep on running the program.  So if variable_1 suddenly equaled y, the loop would stop.
+
+until - Also a loop that is useful to flow control because it allows for reiteration.  Basically says until variable is equal to x keep running the program in a loop.  When the variable finally does equal x the loop will stop running.
