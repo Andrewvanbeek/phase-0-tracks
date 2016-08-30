@@ -69,10 +69,13 @@ puts elementary
 # (What is the significance of the number 122 in relation to the character z?)
 #is the enumerator of the string "z".
 
-enumerator = "z".each_byte {|c| print c, ' ' }
+enumerator = "z".each_byte {|z| print z, ' ' }
 puts enumerator
+
 
 # "How many times does the letter 'a' appear in this string?".count "a"
 
 counting = "How many times does the letter 'a' appear in this string?".count "a"
+
+puts counting
 # => 4
