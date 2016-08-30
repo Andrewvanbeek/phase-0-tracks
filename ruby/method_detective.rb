@@ -7,36 +7,56 @@
 # "iNvEsTiGaTiOn".<swapcase>
 # => “InVeStIgAtIoN”
 
-puts "iNvEsTiGaTiOn".swapcase
 
+investigation = "iNvEsTiGaTiOn".swapcase
+
+puts investigation
 # "zom".insert(1, "o")
 # => “zoom”
 
-puts "zom".insert(1, "o")
+zoom = "zom".insert(1, "o")
 
-# "enhance".insert(6, '    ').insert(0, '    ')
+puts zoom
+
+# "enhance".center(4)
 # => "    enhance    "
 
-puts "enhance".insert(6, "    ").insert(0, "    ")
+enhance = "enhance".center(4)
+
+puts enhance
 
 # "Stop! You’re under arrest!".<upcase>
 # => "STOP! YOU’RE UNDER ARREST!"
-puts "Stop! You’re under arrest!".upcase
 
-# "the usual".insert (10, " suspects")
+arrest = "Stop! You’re under arrest!".upcase
+
+puts arrest
+
+
+# "the usual".insert (9, " suspects")
 #=> "the usual suspects"
 
-puts "the usual".insert (10," suspects")
+suspects1 = "the usual".insert(9, ' suspects')
+
+puts suspects1
 
 # " suspects".insert(0, "the usual")
 # => "the usual suspects"
-puts " suspects".insert(0, "the usual")
+suspects2 = " suspects".insert(0, "the usual")
 
-# "The case of the disappearing last letter".<???>
+puts suspects2
+
+# "The case of the disappearing last letter".chop
 # => "The case of the disappearing last lette"
 
-# "The mystery of the missing first letter".<???>
+caseof = "The case of the disappearing last letter".chop
+
+# "The mystery of the missing first letter".slice(1...40)
 # => "he mystery of the missing first letter"
+
+caseoffirstletter = "The mystery of the missing first letter".slice(1...40)
+
+puts caseoffirstletter
 
 # "Elementary,    my   dear        Watson!".<???>
 # => "Elementary, my dear Watson!"
