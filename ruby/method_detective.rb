@@ -4,36 +4,75 @@
 # When there's more than one suspect who could have
 # committed the crime, add additional calls to prove it.
 
-# "iNvEsTiGaTiOn".<???>
+# "iNvEsTiGaTiOn".<swapcase>
 # => “InVeStIgAtIoN”
 
-# "zom".<???>
+
+investigation = "iNvEsTiGaTiOn".swapcase
+
+puts investigation
+# "zom".insert(1, "o")
 # => “zoom”
 
-# "enhance".<???>
+zoom = "zom".insert(1, "o")
+
+puts zoom
+
+# "enhance".center(4)
 # => "    enhance    "
 
-# "Stop! You’re under arrest!".<???>
+enhance = "enhance".center(4)
+
+puts enhance
+
+# "Stop! You’re under arrest!".<upcase>
 # => "STOP! YOU’RE UNDER ARREST!"
 
-# "the usual".<???>
+arrest = "Stop! You’re under arrest!".upcase
+
+puts arrest
+
+
+# "the usual".insert (9, " suspects")
 #=> "the usual suspects"
 
-# " suspects".<???>
-# => "the usual suspects"
+suspects1 = "the usual".insert(9, ' suspects')
 
-# "The case of the disappearing last letter".<???>
+puts suspects1
+
+# " suspects".insert(0, "the usual")
+# => "the usual suspects"
+suspects2 = " suspects".insert(0, "the usual")
+
+puts suspects2
+
+# "The case of the disappearing last letter".chop
 # => "The case of the disappearing last lette"
 
-# "The mystery of the missing first letter".<???>
+caseof = "The case of the disappearing last letter".chop
+
+# "The mystery of the missing first letter".slice(1...40)
 # => "he mystery of the missing first letter"
 
-# "Elementary,    my   dear        Watson!".<???>
-# => "Elementary, my dear Watson!"
+caseoffirstletter = "The mystery of the missing first letter".slice(1...40)
 
-# "z".<???>
+puts caseoffirstletter
+
+# "Elementary,    my   dear        Watson!".strip
+# => "Elementary, my dear Watson!"
+elementary = "Elementary,    my   dear        Watson!".strip
+
+puts elementary
+
+# "z".each_byte {|c| print c, ' ' }
 # => 122 
 # (What is the significance of the number 122 in relation to the character z?)
+#is the enumerator of the string "z".
 
-# "How many times does the letter 'a' appear in this string?".<???>
+enumerator = "z".each_byte {|c| print c, ' ' }
+puts enumerator
+
+# "How many times does the letter 'a' appear in this string?".count "a"
+
+counting = "How many times does the letter 'a' appear in this string?".count "a"
 # => 4

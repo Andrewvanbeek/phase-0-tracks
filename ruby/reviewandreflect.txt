@@ -1,0 +1,80 @@
+Variables
+1. What is a variable? Why might a programmer use a variable?
+
+Variables are means to store a specific value of data while also labeling that values so you later reference in your ruby code.  A programmer might use a variable as way to easily reference a value multiple times.  For example if they want to reference the pi value of 3.14159265358979323846264338327950288419716939937510, they could just store in it a variable called pi (pi = 3.14159265358979323846264338327950288419716939937510).  Then call simply print the pi variable each time they wanted that value.
+   
+
+2. If the value of first_name is "Abraham" and last_name is "Lincoln", explain the order in which Ruby will run the line full_name = first_name + last_name, and what the final result will be.
+
+Ruby will add the variables within the full_name variable of the variables from left to right.  This will cause first_name to have last_name added to it resulting in “AbrahamLincoln” (there is no space within the strings).
+
+Data Types
+3. For each of the following data types, write a short definition and give at least one example of when you might use the data type in a program. (Don't use an example we've already provided.)
+
+string - is an object that holds arbitrary characters that are human readable.  They do not have distinct numeric value unless a specific method is run on them.  They are usually in “” for example “Hey!” is a string.  Could use if you were trying to print a message to a user like “Hello!”.
+
+integer - An integer is object with numeric value.  “5” would still be a string since is characters by quotes, but 5 is integer because it a number and it data with value that can be directly manipulated by math.  For example you could set a variable as the value of two integers added together like a = 5 +4.
+
+float-  A float is integer, but traditional integers end before the decimal mark making them whole numbers.  A float are integers that have the decimal such as 4.3, 0.2 and etc.  To change a normal integer or string with a number into a float, just use the .to_f command.  Makes sense if you are working with dollars 4.45 dollars for example.
+
+nil -  Is basically there is no value yet, but it can be more closely resembled to N/A.  You can not add or manipulate nil, it is more of a placeholder value, in that nil is not the same as 0 in terms of an integer, and is not the same as “” as a string.  
+
+boolean- Can be true or false.  For example a = false is a boolean.  Can have many applications for example as a means to keep a loop running: while x = false do xyz. 
+
+
+Algorithms
+
+4. What is an algorithm?
+
+- Set of procedure of several steps to solve a problem. 
+
+5. What are two common categories of algorithm in computer science? 
+
+- Searching(like searching for names) and Sorting(could be ordering from least to greatest) are two common categories in computer science.  
+
+Methods
+6. What is a method? Why might a programmer choose to use a method?
+
+A method is a way to organize code into to subroutines to give a specific output  that be can be easily called. A programmer may use this to get a certain desired output for multiple strings, just like how we reused the encryption method to encrypt multiple inputs without rewriting the code over again.
+
+7. Define the following terms as they relate to a method. 
+
+return value - The value returned after the method is completed.
+side effect - Can be anything that affects the current state, for example like changing a variable’s value in comparison to a return value which could just be printing out a string and a value. 
+
+parameter-  These are the values that will be processed and transformed in out method.  Can be written as expression you such as x or y as long as you write these parameters in the same way during the argument.
+
+argument- A ruby method argument, is the actual actions and code written to affect the parameters.  For example if our parameters are x and y, the argument could be:
+
+ var1 = x + y =5 
+puts var1.
+
+implicit return - It means the last evaluated expression in a method is the return value of that method.
+
+8. What are global scope and method scope? How do those scopes impact the availability of data at different points in a program?  
+
+Global scope means variables and resources that can be referenced anyway in your ruby code.  
+
+Method scope refers to variables only accessible within the methods.  
+
+This is significant because if you try to call a variable you created in a method outside that method, ruby will not be able to call it.  The reason is because that variable only lives within the method and can not be referenced on a global scale.  If it is global variable with a global scope then ruby will be able to access it from anywhere.
+
+Control Flow
+9. What is control flow? Why might a programmer choose to use flow control?
+
+Control flow is controlling the actual flow of how a program might actually operate in different situations.  It could be more important in order for the program just operate as desired, or to deal with things such as human error, and also reiterating the program for multiple uses.
+
+10. Define the following terms as they relate to flow control.
+
+loop - A means to reiterate a program, that is it allows for a things such as message, if statements, and methods to be run continuously until a certain point is reached.  Great for control flow because it allows you set the program to run as long as you need it to meet your criteria as a programmer.
+
+if - Allows for a specific actions to be enacted if a certain condition is met.  Good for control flow in that allows you create and control the experience depending on the situation.
+
+else - Allows you to control the outcome if a non specific action was made, for example if the user did not do what you wanted.  Great for control flow because it can help account for human error.
+
+elsif - Is a way to accommodate for multiple specific conditions, if one if statement is not enough.  For example if there are three specific inputs you want add for your flow control you first add an if, then two elsif statements and order them according to which one had the most priority.
+
+while - Is a loop that is useful to flow control because it allows for reiteration.  It basically says while variable_1 is x keep on running the program.  So if variable_1 suddenly equaled y, the loop would stop.
+
+until - Also a loop that is useful to flow control because it allows for reiteration.  Basically says until variable is equal to x keep running the program in a loop.  When the variable finally does equal x the loop will stop running.
+
