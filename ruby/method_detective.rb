@@ -58,12 +58,21 @@ caseoffirstletter = "The mystery of the missing first letter".slice(1...40)
 
 puts caseoffirstletter
 
-# "Elementary,    my   dear        Watson!".<???>
+# "Elementary,    my   dear        Watson!".strip
 # => "Elementary, my dear Watson!"
+elementary = "Elementary,    my   dear        Watson!".strip
 
-# "z".<???>
+puts elementary
+
+# "z".each_byte {|c| print c, ' ' }
 # => 122 
 # (What is the significance of the number 122 in relation to the character z?)
+#is the enumerator of the string "z".
 
-# "How many times does the letter 'a' appear in this string?".<???>
+enumerator = "z".each_byte {|c| print c, ' ' }
+puts enumerator
+
+# "How many times does the letter 'a' appear in this string?".count "a"
+
+counting = "How many times does the letter 'a' appear in this string?".count "a"
 # => 4
