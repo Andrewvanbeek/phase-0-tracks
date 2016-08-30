@@ -17,15 +17,20 @@ puts "zom".insert(1, "o")
 # "enhance".insert(6, '    ').insert(0, '    ')
 # => "    enhance    "
 
+puts "enhance".insert(6, "    ").insert(0, "    ")
+
 # "Stop! You’re under arrest!".<upcase>
 # => "STOP! YOU’RE UNDER ARREST!"
 puts "Stop! You’re under arrest!".upcase
 
-# "the usual".<???>
+# "the usual".insert (10, " suspects")
 #=> "the usual suspects"
 
-# " suspects".<???>
+puts "the usual".insert (10," suspects")
+
+# " suspects".insert(0, "the usual")
 # => "the usual suspects"
+puts " suspects".insert(0, "the usual")
 
 # "The case of the disappearing last letter".<???>
 # => "The case of the disappearing last lette"
