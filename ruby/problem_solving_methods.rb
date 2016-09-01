@@ -51,7 +51,10 @@ p array1
   		x = 0
   	end
   	varavb = array1[array1.index(y) - 2] + array1[array1.index(y) - 1 + x]
-  	y = varavb
+  	if varavb == 8
+  		varavb = array1[array1.index() - 2] + array1[array1.index(y) - 1 + x]
+  	else
+  	end
   end
   p array1
   p array1[-1]
