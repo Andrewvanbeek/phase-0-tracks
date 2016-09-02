@@ -6,13 +6,13 @@ array = [10, 11, 12, 13, 14, 15]
 
 
 def search_array(arr, i)
-valid_input = -1
+valid_input = -1 #this make sures that the count starts from 0
 nilvar = true
-arr.each do |integer|
-	valid_input +=1 
-	if arr[valid_input] == i
-		 return valid_input
-		 nilvar = false
+arr.each do |integer| #need to iterate through each element of the array
+	valid_input +=1  #make sure the indexes increments by 1 level each time array goes through iteration
+	if arr[valid_input] == i # if the array[valid input] is the same as the array element parameter, the valid input ie the correct index will be printed
+		 return valid_input  #returns the input
+		 nilvar = false  #if statement returns 
 	else
 	end
 end
@@ -24,8 +24,10 @@ end
 
 
 array << 26
+array << 29
 
-p search_array(array, 2)
+p search_array(array, 10)
+p array
 
 
 
@@ -33,6 +35,7 @@ p search_array(array, 2)
 	#
 
 def fib(number)
+
 array1 = []
  number.times do |x| 
  	new_index = x
@@ -50,14 +53,12 @@ p array1
   		y = y
   		x = 0
   	end
+
   	varavb = array1[array1.index(y) - 2] + array1[array1.index(y) - 1 + x]
-  	if varavb == 8
-  		varavb = array1[array1.index() - 2] + array1[array1.index(y) - 1 + x]
-  	else
-  	end
-  end
+  	 end
   p array1
   p array1[-1]
 end
+
 
  p fib(9)
