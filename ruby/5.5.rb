@@ -8,17 +8,12 @@
 
 def aliasmethod(name) # Define the method
 	name = name.downcase #downcase any input
-	if name == "quit"
-		name = "quit program" #prevents error for spilit that expects a space and an item
-	else
-	end
 	# p name
 	name = name.split(' ') #turn name into an array
 	 if name.length == 3  #create an if statement for people with a space in the last name like me.
 	 	name[1] = name[1] + name[2]  #if there are three array elements when a spilit is created then this statement will add the first part of the lastname to the second part of the lastname.
 	 	name.delete_at(2) #this part of the code will delete third uncessary array element
 	 else
-	  #prevents spilit error when quiting expecting a space
 	 end
 	alias_array1 = name[1]  #takes the lastname and stores it into a new array(but could be var as well I think).
 	alias_array2 = name[0]  #takes the firstname and stores it into a new array(could also be a variable I just went with an array index).
