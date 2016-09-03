@@ -113,19 +113,21 @@ timechecker = -1
 until input_var == "quit" do #until loop to run into user writes quit
 
 puts "Hey put in your name! First name and Last name that is! Write quit if you are done. If you have lastname with a space that is fine but please no names more than 3 words or else you will get this message again. For example Andrew Van Beek is ok but Andrew Ryan Van Beek is not ok because it is more then 4 words.  also just write quit when you are done."
-timechecker += 1 #increment increase of this var to be used update array indexes later
-arr[timechecker] = timechecker #first create the array indexes
-arrforsecid[timechecker] = timechecker #create the array indexes
-input_var = gets.chomp #get user input
+timechecker += 1
+p timechecker
+arr[timechecker] = timechecker
+arrforsecid[timechecker] = timechecker
+p arr
+input_var = gets.chomp
 
 
 
-p aliasmethod(input_var)  #p the result of user input
+p aliasmethod(input_var)
 
 
-if input_var != "quit"  #alow the user to quit
+if input_var != "quit"
 special_Var = input_var
-varsfords = aliasmethod(input_var)  #update the arrays to store the user input answers
+varsfords = aliasmethod(input_var)
 arr[timechecker] = special_Var
 arrforsecid[timechecker] = varsfords
 else
@@ -136,9 +138,9 @@ end
 end
 
 
-arrforsecid.each do |y|  #prints both statements
+arrforsecid.each do |y|
 	if arrforsecid.index(y) < timechecker
-		puts "#{y} is the secret name for #{arr[arrforsecid.index(y)]}!"  #the index of the y should be the same as the corresponding value in the other array
+		puts "#{y} is the secret name for #{arr[arrforsecid.index(y)]}!"
 	else
 end
 
