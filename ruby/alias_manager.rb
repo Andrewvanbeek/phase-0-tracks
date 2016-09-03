@@ -9,7 +9,7 @@
 def aliasmethod(name) # Define the method
 	name = name.downcase #downcase any input
 	if name == "quit"
-		name = "quit program" #prevents error for spilit that expects a space and an item
+		name = "w a" #prevents error for spilit that expects a space and an item
 	else
 	end
 	# p name
@@ -103,12 +103,40 @@ end
 
 
 input_var = 0 #will be our var in our method
+new_array_hash = []
+timechecker = 0
 
 until input_var == "quit" do #until loop to run into user writes quit
 
 puts "Hey put in your name! First name and Last name that is! Write quit if you are done. If you have lastname with a space that is fine but please no names more than 3 words or else you will get this message again. For example Andrew Van Beek is ok but Andrew Ryan Van Beek is not ok because it is more then 4 words.  also just write quit when you are done."
-
+new_array_hash = [0]
 input_var = gets.chomp
 
+	varsfords = aliasmethod(input_var)
+	timechecker = -1
+	timechecker = timechecker + 1
+	p timechecker
+	new_array_hash[timechecker] = input_var
+
+
 	p aliasmethod(input_var)
+	p varsfords
+	data_structure_to_print = Hash.new
+	data_structure_to_print[input_var] = varsfords
+
+	puts "this is #{varsfords} and this is #{input_var}"
+	
+
+if varsfords == "E X"
+	data_structure_to_print.each do |name, val|
+		puts "#{name} is the #{val}."
+	end
+	else
+	end
 end
+
+p timechecker
+
+
+
+p new_array_hash 
