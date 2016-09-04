@@ -62,3 +62,51 @@ end
 p fib(100)
 
 
+arrayforsorting = [5, 7, 6, 10]
+
+
+
+def ascendingmethod(arr) #defines the method
+
+  def mergethearrays(arrayhalf1, arrayhalf2)  #Creates a new method that will be used in another method.  This method will take two halves of our original array and put it back togehter.  The first time the program is iterate in it will put the array back together.  but then it will send to the other method, and then finally come back to this method to properly sorted in ascending order.
+half1 = 0 #will use these as a means for our loop break rule a means to index different items in both arrays
+half2 = 0 #second index to be used with the second half of the array
+
+finalresultmethod = []  #final results will be pushed into this array
+
+
+loop do  #Do loop that takes in both halves of the array
+  break if half2 >= arrayhalf2.length and half1 >= arrayhalf1.length  #break rule for our array that says once both the half1 and half2 vars are >= then the length of the array elements in both array halfs then the loop will stop running.
+
+  if half2 >= arrayhalf2.length or (half1 < arrayhalf1.length and arrayhalf1[half1] < arrayhalf2[half2])  #if statement to decide which array will receive input first
+    finalresultmethod << arrayhalf1[half1] #feeds into the final result array
+    half1 += 1  #increments
+  else
+    finalresultmethod << arrayhalf2[half2]  #similar workflow as half1
+    half2 += 1
+  end
+end
+
+  return finalresultmethod #returns the finalresult method
+
+end
+
+
+  def megrging(tobecutarray) 
+    return tobecutarray if tobecutarray.length <= 1  #basically failsafe if the array does not have any array elements
+    indexslicer = tobecutarray.length/2 - 1    #use as a means to create the proper ranges in our array halves.  
+    arrayhalf1 = megrging(tobecutarray[0..indexslicer])     #use ranges to cut the array, use our indexslicer as reference point
+    arrayhalf2 = megrging(tobecutarray[indexslicer+1..-1])  #uses ranges to create to arrays and store in arrayhalfs
+    return mergethearrays(arrayhalf1, arrayhalf2)
+
+
+end
+  megrging(arr)  #puts our array input through merging and merging puts it through merge the arrays which will rejoin into a new array tha order has been changed.  Finally that new array will be cut again and processed one more time to create ascending order.
+  
+  end
+
+
+p ascendingmethod(arrayforsorting)
+
+
+
