@@ -3,24 +3,43 @@ Answer each question briefly -- we're checking your knowledge, not your essay sk
 Data Structures
 1. Why are data structures useful in programming?
 
+- Data structures are important to store various different values, or even labeled data values.  And can be important for our applications if we want to perform certain task, reference certain data structure elements, and especially important if we want iterate a certain procedure for multiple elements.
+
 Arrays
 2. Define "array" and describe the characteristics of an array.
 
+Array is a data structure that can house multiple data elements, and that is structured through a integer index system i.e you can reference the array’s elements through an index integer.
+
 3. Give two original examples of data sets that an array might be well-suited for.
+
+- A group of integers related to a mathematic formula
+-  The alphabet
 
 Hashes
 4. Define "hash" and describe the characteristics of a hash.
 
+Similar to arrays, are even called associative versions of arrays.  Main difference is that the index of the hash can be referenced by multiple values.
+
 5. Give two original examples of data sets that a hash might be well-suited for.
+
+-  Any data the has to do with a form, for example like a form to fill out email registration, or a form that has to do with learning attributes about your dating profile.
 
 Iteration
 6. Why is iteration useful?
 
+- Iteration is useful because it lets you modify multiple elements in a data structure in a similar fashion through the use of block arguments.
+
 7. Give an example of a real-life task that would require iteration if you wrote an algorithm for it.
+
+-Filling up four of your tires on your car, in that you would have to iterate and do the same process of unscrewing the air cap, taking the air filler pipe, filling the tire, and closing the cap on all four tires independently.
 
 Blocks
 8. What is a block?
 
+Is a piece of code that will be iterated on a data element or data elements.  They live either in a {} or a do and end.  Will enact a specific action.
+
 9. What is a block parameter, and where does its value come from?
+
+Depending on the block can be optional, but it is an piece of your argument in your block for example |x| could be block param.
 
 Rubric
