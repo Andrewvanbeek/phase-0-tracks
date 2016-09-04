@@ -109,4 +109,7 @@ end
 p ascendingmethod(arrayforsorting)
 
 
+#this was a tough exercise!
+
+
 
