@@ -101,6 +101,54 @@ def remove_stuff (arr)
     end
 end
 
+
 numbers = [1,2,3,4,5,6,7,8,9,10]
 
 p remove_stuff (numbers)
+
+
+
+
+vegetables = ["Tomato", "Carrot", "Cucumber", "Beet"]
+
+p "Original data:"
+p vegetables
+
+#iterate through the array with .each
+vegetables.each do |vegetable|
+    puts vegetable
+end
+
+
+vegetables.map! do |vegetables|
+    vegetables.upcase
+end
+
+p vegetables
+
+shoes = {Nike:20, Addidas:30, Puma:80}
+p shoes
+
+shoes.each do |shoebrand, price|
+    puts "#{shoebrand} costs #{price} dollars"
+end
+
+new_shoes = shoes.map do |shoebrand, price|
+    price + 25
+end
+
+numbers = { "a" => 6, "b" => 4, "c" => 3 }
+numbers.delete_if {|letter, number| number < 5}
+puts numbers
+
+numbers = { "a" => 6, "b" => 4, "c" => 3 }
+numbers.keep_if {|letter, number| number < 5}
+puts numbers
+
+letters = ["a", "b", "c", "d", "e", "f", "g", "h"]
+letters.keep_if {|letter| letter == "a" or letter == "g"}
+puts letters
+
+letters = ["a", "b", "c", "d", "e", "f", "g", "h"]
+letters.delete_if {|letter| letter == "a" or letter == "g"}
+puts letters
