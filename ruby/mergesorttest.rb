@@ -22,7 +22,6 @@ def mergesort(array)
   def mergesort_iter(array_sliced)
     return array_sliced if array_sliced.length <= 1
     mid = array_sliced.length/2 - 1
-    p mid
     left_sorted = mergesort_iter(array_sliced[0..mid])
     right_sorted = mergesort_iter(array_sliced[mid+1..-1])
     return merge(left_sorted, right_sorted)
