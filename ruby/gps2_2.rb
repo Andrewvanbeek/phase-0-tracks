@@ -29,7 +29,7 @@
 
 
 def printprettylist(list)
-	puts "-------------Get YO FOOD-----------------"
+	puts ""
 	list.each do |food, itemnum|
 		puts "You have to get #{itemnum} of #{food}!"
 	end
@@ -48,28 +48,33 @@ def create_glist(groceryitems)
 end
 
 
-sneakthemethod = create_glist("carrots apples cereal pizza")
+sneakthemethod = create_glist("Lemonade Tomatoes Onions")
 
-def add_item(list, newitem, quantity)
+def add_item_orupdatevalue(list, newitem, quantity)
 	list[newitem] = quantity
 	return list
 end
 
-addedlist = add_item(sneakthemethod,"ice cream", 1)
+addedicecream = add_item_orupdatevalue(sneakthemethod,"Ice Cream", 4)
+updateonions =  add_item_orupdatevalue(addedicecream,"Tomatoes", 3)
+lemondaupdate = add_item_orupdatevalue(updateonions, "Lemonade", 2)
 
 def removalofitem(list, itemtoberemoved)
 	list.delete(itemtoberemoved)
 	return list
 end
 
-remvoallist = removalofitem(sneakthemethod, "carrots")
+remvoallist = removalofitem(updateonions, "Lemonade")
 
-def updatequantity(list, item, quantity)
-	list[item] = quantity
-	return list
-end
+updateicecream = add_item_orupdatevalue(remvoallist, "Ice Cream", 1)
 
-quantitylist = updatequantity(sneakthemethod, "apples", 10)
+#Took this code out because is same code as add item.  For refactoring make sense to have one mehtod.
+# def updatequantity(list, item, quantity)
+# 	list[item] = quantity
+# 	return list
+# end
+
+# quantitylist = updatequantity(sneakthemethod, "apples", 10)
 
 # def printprettylist(list)
 # 	list each do |food, itemnum|
@@ -78,9 +83,29 @@ quantitylist = updatequantity(sneakthemethod, "apples", 10)
 # end
 
 
-printprettylist(sneakthemethod)
+printprettylist(updateicecream)
 
 
+
+# What did you learn about pseudocode from working on this challenge?
+#I learned pseudocode is really helpful when planning things out.  My guide also showed me how to do in a productive way which is to take this structure of Method:  What to accomplish, What input it takes, What are the steps for this code, and what is the output of the method.  I think I will use this structure moving forward.
+
+# What are the tradeoffs of using arrays and hashes for this challenge?
+
+#  I think hashes make more sense for this exercise because this data was associated with each other, in that the key is associate with the value or quantity here.  We could still do it with arrays but in that case we would need two arrays one for the grocery list item and one for the quantity.
+
+
+# What does a method return?
+#the output of the code running on the parameters you put into.
+# What kind of things can you pass into methods as arguments?
+#Inputs can vary from different type of data such as integers and strings, but can also data structures such as arrays or hashes include varaibles that can house method output results themselves.
+
+# How can you pass information between methods?
+#Store the method as a varaiable and pass it as an arguement, or set up a method within a method through use of class, or use of a global variable.
+
+# What concepts were solidified in this challenge, and what concepts are still confusing?
+
+# I think scope and the breakdown of strings into arrays can be confusing, since there is a lot of room for human error.
 
 
 
