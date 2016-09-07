@@ -48,7 +48,7 @@ def create_glist(groceryitems)
 end
 
 
-sneakthemethod = create_glist("Lemonade Tomatoes Onions")
+sneakthemethod = create_glist("Lemonade Tomatoes Onions Ice Cream")
 
 def add_item_orupdatevalue(list, newitem, quantity)
 	list[newitem] = quantity
