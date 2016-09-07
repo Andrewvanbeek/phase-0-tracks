@@ -78,4 +78,6 @@ robotstorage.each do |a|
 	a.destroy
 end
 
+p robotstorage
+
 
