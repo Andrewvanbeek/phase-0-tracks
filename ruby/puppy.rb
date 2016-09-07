@@ -32,7 +32,12 @@ class Puppy
 
 	def dogyears(n)
 		dogy = ((n - 2) * 4) + (10.5 * 2) #formula of dog years is that the firt two years of a dog life 10.5 years, every other year after that is 4
-		doy 
+		dogy 
+	end
+
+	def fetch(item)
+		puts "#{item} was fetched."
+	end
 
 
 end
@@ -40,3 +45,11 @@ end
 duchess = Puppy.new
 
 duchess.speak(5)
+
+duchess.rollover
+
+p duchess.dogyears(8)
+
+duchess.fetch("stick")
+
+
