@@ -14,3 +14,4 @@
 #Running
 #Wagging their tail
 #Having fun!
+#Barking!
