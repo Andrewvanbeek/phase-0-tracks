@@ -39,6 +39,9 @@ class Puppy
 		puts "#{item} was fetched."
 	end
 
+	def initialize
+		puts "Initializing new puppy instance ..."
+	end
 
 end
 
@@ -51,5 +54,28 @@ duchess.rollover
 p duchess.dogyears(8)
 
 duchess.fetch("stick")
+
+
+robotstorage = []
+
+class Robot
+		def initialize
+		puts "Initializing new Robot instance ..."
+	end
+
+		def destroy
+			puts "destroy all humans!"
+		end
+end
+
+indexer = 0
+while robotstorage.length < 50
+
+	robotstorage << Robot.new
+end
+
+robotstorage.each do |a|
+	a.destroy
+end
 
 
