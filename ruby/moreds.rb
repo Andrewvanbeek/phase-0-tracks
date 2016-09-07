@@ -36,7 +36,7 @@ def add_item_orupdatevalue(list, newitem, quantity)
 end
 
 def printprettylist(list)
-	puts ""
+	puts "-------------Get YO FOOD-----------------"
 	list.each do |food, itemnum|
 		puts "You have to get #{itemnum} of #{food}!"
 	end
