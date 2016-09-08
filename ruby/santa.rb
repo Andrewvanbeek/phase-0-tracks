@@ -51,6 +51,10 @@ class Santa
 		@gender = new_gender
 	end
 
+	def gender
+		@gender
+	end
+
 end
 
 #create an empty array
