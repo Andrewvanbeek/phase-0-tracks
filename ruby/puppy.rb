@@ -32,6 +32,7 @@ class Puppy
 
 	def dogyears(n)
 		dogy = ((n - 2) * 4) + (10.5 * 2) #formula of dog years is that the firt two years of a dog life 10.5 years, every other year after that is 4
+		if n == "1"
 		dogy 
 	end
 
@@ -66,6 +67,11 @@ class Robot
 		def destroy
 			puts "destroy all humans!"
 		end
+
+		def notdestory
+			@person = "Phillip J Fry"
+			puts "don't destroy #{@person}."
+		end
 end
 
 indexer = 0
@@ -76,8 +82,9 @@ end
 
 robotstorage.each do |a|
 	a.destroy
+	a.notdestory
 end
 
-p robotstorage
 
 
+end
