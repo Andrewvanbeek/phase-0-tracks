@@ -10,4 +10,36 @@ class Calculator
   def multiply(x,y)
     x * y
   end
+
+  def divide(x,y)
+  	x / y
+  end
 end
+
+# class Ruler
+# 	 def add(x,y)
+#     x + y
+#   end
+
+#   def subtract(x,y)
+#     x - y
+#   end
+
+#   def multiply(x,y)
+#     x * y
+#   end
+# end
+
+# class Compass
+# 	 def add(x,y)
+#     x + y
+#   end
+
+#   def subtract(x,y)
+#     x - y
+#   end
+
+#   def multiply(x,y)
+#     x * y
+#   end
+# end
