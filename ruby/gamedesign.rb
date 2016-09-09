@@ -13,10 +13,22 @@
 class Game
 
 	attr_reader :something
+	attr_accessor :firstphrase
+	attr_accessor :secondphrase
 
-	def initialize
+	def initialize(firstphrase)
 		@something = 4
+		@firstphrase = firstphrase
 	end
+
+	def guess(secondphrase)
+		@secondphrase = secondphrase
+	if @secondphrase == @firstphrase
+		puts you guessed it!
+	else
+		puts "sorry nope!"
+	end
+end
 
 
 end
@@ -34,7 +46,9 @@ require 'io/console'
 
 pw = STDIN.noecho(&:gets).chomp #hides the text of what is being typed
 
-x += 1
+phrase1phase1 = Game.new(pw)
+
+while x < phrase1phase1.firstphrase.length
 
 end
 
