@@ -1,5 +1,5 @@
 class Santa
-	# attr_reader :gender
+	attr_reader :gender
 		attr_accessor :ethniciy
 
 	def initialize(gen, ethn)
@@ -9,7 +9,8 @@ class Santa
 		@gender = gen
 		@ethniciy = ethn 
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"] #0, 1, 2, 3, 4, 5, 6
-		@age = 0
+		randomage= (0..140).to_a
+		@age = randomage.sample
 	end
 
 	
@@ -63,20 +64,22 @@ end
 	etharr = ["asian", "caucasian", "spanish", "african american", "middle eastern", "robot"]
 	indexer = 0
 
-	while indexer < genderarr.length
-	santas << Santa.new(genderarr[indexer], etharr[indexer])
-	puts santas[indexer].ethniciy
-	puts santas[indexer].gender
+
+	while indexer < 100
+	santas << Santa.new(genderarr.sample, etharr.sample)
+	puts "Santa is #{santas[indexer].ethniciy} and #{santas[indexer].gender}!"
+	puts "Santa is #{santas[indexer].ager}!"
 	indexer += 1
 	end
 
+
 	
-	santas[0].ethniciy = "ASIAN"
-	p santas[0].ager 
-	santas[0].celebrate_birthday
-	p santas[0].ager
-	p santas[0].get_mad_at("Dancer")
-	santas[0].gender = "MANLY"
-	p santas[0].gender
+	# santas[0].ethniciy = "ASIAN"
+	# p santas[0].ager 
+	# santas[0].celebrate_birthday
+	# p santas[0].ager
+	# p santas[0].get_mad_at("Dancer")
+	# santas[0].gender = "MANLY"
+	# p santas[0].gender
 
 

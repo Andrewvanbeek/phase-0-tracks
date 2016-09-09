@@ -1,0 +1,10 @@
+def andrewisthebestever(n)
+	n.times do |n|
+		puts "Hey andrew is the best!"
+	end
+end
+
+
+
+andrewisthebestever(10)
+
