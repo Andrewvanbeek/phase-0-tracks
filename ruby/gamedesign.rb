@@ -8,6 +8,7 @@
 #One method should take the first string and store it, while the second method should be able to access that string and see if evaluates to the second string
 #input should be the first word, and the second input should be the guesses of that word.  The number times a user can guess the word is tied directly into that the length of the first word.
 #if there is a guess
+#should be another method that asks to guess the letters of the firstphrase and printout if the letters are in the word of the phrase.
 
 
 class Game
@@ -15,6 +16,7 @@ class Game
 	attr_reader :something
 	attr_accessor :firstphrase
 	attr_accessor :secondphrase
+	attr_accessor :randomletterstring
 
 	def initialize(firstphrase)
 		@something = 4
@@ -24,31 +26,72 @@ class Game
 	def guess(secondphrase)
 		@secondphrase = secondphrase
 	if @secondphrase == @firstphrase
-		puts you guessed it!
+		puts "you guessed it!"
 	else
-		puts "sorry nope!"
+		puts "Sorry nope! Try again"
+	end
+end
+	def singleletterguess(letter)
+		@randomletterstring = (1..firstphrase.length).to_a
+		@randomletterstring.map! do |a|
+			"_"
+		end
+		if @firstphrase.include? letter
+			@randomletterstring[@firstphrase.index(letter)] = letter
+			@randomletterstring.join
+			puts "the word so far is #{@randomletterstring}"
+		end 
+
 	end
 end
 
 
-end
-
-x = 0
-ohyeah = Game.new 
-
-while x < ohyeah.something 
 
 
 
-puts "what is the pw?"
+
+
+
+
+puts "what is the word to be guessed?"
 
 require 'io/console'
 
-pw = STDIN.noecho(&:gets).chomp #hides the text of what is being typed
+pw = STDIN.noecho(&:gets).chomp.upcase #hides the text of what is being typed
 
 phrase1phase1 = Game.new(pw)
 
+x = 0
+
 while x < phrase1phase1.firstphrase.length
 
+	puts "Can you guess the letters? #{phrase1phase1.firstphrase.length - x} trys available."
+
+	singlelettergues = gets.chomp.upcase
+
+	phrase1phase1.singleletterguess(singlelettergues)
+
+	x += 1
+
+	puts "Are you ready for you for word guess?"
+
+
+	finalguess = gets.chomp.upcase
+
+	if finalguess == "YES"
+
+	puts "what is the word?"
+
+	phrase2whattodo = gets.chomp.upcase
+
+	phrase1phase1.guess(phrase2whattodo)
+
+	x += 1
+else 
+	puts "ok try guessing the letter again"
+end
+	if phrase1phase1.firstphrase == phrase1phase1.secondphrase
+		x = phrase1phase1.firstphrase.length
+	end
 end
 
