@@ -20,6 +20,11 @@ class Game
 
 	def initialize(firstphrase)
 		@firstphrase = firstphrase
+		@arr = @firstphrase.split('')
+@array2 = (1..@firstphrase.length).to_a
+@array2.map! do |a|
+			"_"
+		end
 	end
 
 	def guess(secondphrase)
@@ -31,19 +36,28 @@ class Game
 	end
 	@secondphrase == @firstphrase
 end
-	def singleletterguess(letter)
-		@randomletterstring = (1..firstphrase.length).to_a
-		@randomletterstring.map! do |a|
-			"_"
-		end
-		if @firstphrase.include? letter
-			@randomletterstring[@firstphrase.index(letter)] = letter
-			@randomletterstring.join
-			puts "the word so far is #{@randomletterstring}"
-			@randomletterstring
-		end 
+	def singleletterguess(input)
+	# 	if @firstphrase.include? letter
+	# 		@randomletterstring[@firstphrase.index(letter)] = letter
+	# 		@randomletterstring.join
+	# 		puts "the word so far is #{@randomletterstring}"
+	# 		@randomletterstring
+	# 	end 
 
-	end
+	# end
+
+@arr.each do |b|
+	if b == input
+@array2[@arr.index(b)] = b
+@arr[@arr.index(b)] = 0
+
+end
+end
+
+puts "#{@array2}"
+@array2
+end
+
 end
 
 
@@ -66,21 +80,25 @@ x = 0
 
 arrayofusedletters = []
 
+
 while x < phrase1phase1.firstphrase.length
 
 	puts "Can you guess the letters(If you guess the same letter twice it won't be counted against you)? #{phrase1phase1.firstphrase.length - x} trys available."
 
-	singlelettergues = gets.chomp.upcase
+	lettergues = gets.chomp.upcase
 
-	phrase1phase1.singleletterguess(singlelettergues)
+	phrase1phase1.singleletterguess(lettergues)
+
+	p @randomletterstring
+
+
+	if arrayofusedletters.include?(lettergues)
+		x = x - 1
+	end
+
+	arrayofusedletters << lettergues
 
 	x += 1
-
-	arrayofusedletters << singlelettergues
-
-	# if arrayofusedletters.include?(singlelettergues)
-	# 	puts arrayofusedletter
-	# end
 
 	puts "Are you ready for you for your word guess?"
 
