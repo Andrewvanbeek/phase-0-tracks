@@ -1,0 +1,33 @@
+1. What are classes? Be sure to define the following terms in your explanation and describe the relationships between them:
+
+class-  Can be thought of as blueprint of objects to be created within ruby.  Like the example in 6.1, if you want to created a new species of spider you would probaly work off the old blue print of the spiders attributes and actions.  A class can have multiple different pieces to it such as methods and attributes.
+
+
+
+state - The characteristics and data of each class instance
+
+
+behavior - Can be the actions or methods associated with the instance or in other terms the instance methods.
+
+instance variable - Instance Variable are usually denoted by the @ symbol and are available to used for any methods that exist with the current instance of a class.  Instance variables can be called and accessed using the attr_reader and attr_accessor methods in the class by writing <instance>.<instance var>.
+
+instance method- Methods that can be called during the instance of a class.  Can use methods to change how certain instances deal with certain outputs, to do certain behavior when a certain action is called, and change instance variables.
+
+
+2. What are attributes?
+
+-  Attributes can be actual data set within the class.  A lot of the time this instance data is defined within the initialize method, because that method is directly tied into the creation of new classes.
+
+
+3. Give an example of a real world object, and describe how you might assign its attributes if you were to design a class to represent that object.
+
+-First I would define the Class like Cars, then set instance variables either as set defaults.  For example the defaults (which I would define in the initialize methods would be like @wheels_number = 4, @steering_wheel = 1.  But I would use Initialize params for something a but more fluid like color, and year, and model.
+ 
+4. What is the purpose of the initialize method? When does it run?
+To allow the .new method to have Parameters and arguments passed into it.  
+
+5. What are modules?  -  Are modules are means to group different methods together.  They are different from Class which have different attributes and characteristics, while modules only have methods .  To a call a module method you would call Module.method.
+
+6. What are the different ways you can use a module?
+
+Different types of times to use modules is to either compartmentalize which is when you organize methods just for the sake or organization, or you use them as mixins to call within different classes.

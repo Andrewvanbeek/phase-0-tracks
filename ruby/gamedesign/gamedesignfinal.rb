@@ -38,14 +38,6 @@ class Game
 	@secondphrase == @firstphrase
 end
 	def singleletterguess(input)
-	# 	if @firstphrase.include? letter
-	# 		@randomletterstring[@firstphrase.index(letter)] = letter
-	# 		@randomletterstring.join
-	# 		puts "the word so far is #{@randomletterstring}"
-	# 		@randomletterstring
-	# 	end 
-
-	# end
 
 @arr.each do |b|
 	if b == input
@@ -76,6 +68,8 @@ pw = STDIN.noecho(&:gets).chomp.upcase #hides the text of what is being typed
 
 phrase1phase1 = Game.new(pw)
 
+puts phrase1phase1.firstphrase + "!"
+
 x = 0
 
 arrayofusedletters = []
@@ -101,7 +95,6 @@ while x < phrase1phase1.firstphrase.length
 	x += 1
 
 	puts "Are you ready for you for your word guess? If so write yes(Only write yes if you are sure you don't need letters). If you write anything else you will guess again."
-
 
 
 
