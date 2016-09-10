@@ -16,7 +16,8 @@ class Game
 	attr_reader :something
 	attr_accessor :firstphrase
 	attr_accessor :secondphrase
-	attr_accessor :randomletterstring
+	attr_accessor :arr
+	attr_accessor :array2
 
 	def initialize(firstphrase)
 		@firstphrase = firstphrase
@@ -53,8 +54,7 @@ end
 
 end
 end
-
-puts "#{@array2}"
+puts "#{@array2.join}"
 @array2
 end
 
@@ -89,7 +89,7 @@ while x < phrase1phase1.firstphrase.length
 
 	phrase1phase1.singleletterguess(lettergues)
 
-	p @randomletterstring
+	# p @randomletterstring
 
 
 	if arrayofusedletters.include?(lettergues)
@@ -100,7 +100,7 @@ while x < phrase1phase1.firstphrase.length
 
 	x += 1
 
-	puts "Are you ready for you for your word guess?"
+	puts "Are you ready for you for your word guess? If so write yes(Only write yes if you are sure you don't need letters). If you write anything else you will guess again."
 
 
 
