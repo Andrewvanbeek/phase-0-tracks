@@ -11,6 +11,9 @@ class Santa
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"] #0, 1, 2, 3, 4, 5, 6
 		randomage= (0..140).to_a
 		@age = randomage.sample
+		puts @gender
+		puts @ethniciy
+		puts @age
 	end
 
 	
@@ -30,10 +33,14 @@ class Santa
 
 	#method would take reindeer name and store it into a variable. Then would do delete at 
 	def get_mad_at(reindeer_name)
-	storereindeer_name = reindeer_name
-	@reindeer_ranking.delete(reindeer_name)
+	# storereindeer_name = reindeer_name
+
+	storereindeer_name = @reindeer_ranking.delete(reindeer_name)
 	@reindeer_ranking[@reindeer_ranking.length] = storereindeer_name
 	@reindeer_ranking 
+	
+
+
 	end
 
 	def ethnicitychange(input)
@@ -67,19 +74,20 @@ end
 
 	while indexer < 100
 	santas << Santa.new(genderarr.sample, etharr.sample)
-	puts "Santa is #{santas[indexer].ethniciy} and #{santas[indexer].gender}!"
-	puts "Santa is #{santas[indexer].ager}!"
+	# puts "Santa is #{santas[indexer].ethniciy} and #{santas[indexer].gender}!"
+	# puts "Santa is #{santas[indexer].ager}!"
+
 	indexer += 1
 	end
 
 
 	
-	# santas[0].ethniciy = "ASIAN"
-	# p santas[0].ager 
-	# santas[0].celebrate_birthday
-	# p santas[0].ager
-	# p santas[0].get_mad_at("Dancer")
-	# santas[0].gender = "MANLY"
-	# p santas[0].gender
+	santas[0].ethniciy = "ASIAN"
+	p santas[0].ager 
+	santas[0].celebrate_birthday
+	p santas[0].ager
+	p santas[0].get_mad_at("Dancer")
+	santas[0].gender = "MANLY"
+	p santas[0].gender
 
 
