@@ -13,138 +13,84 @@
 
 class Game
 
-	# attr_reader :something
-	attr_accessor :firstphrase, :finalguess, :secondphrase, :arr, :array2, :x, :secondword, :lettergues, :finalguess 
-	# attr_accessor :secondphrase
-	# attr_accessor :arr
-	# attr_accessor :array2
-	# attr_accessor :x
-	# attr_accessor :secondword
-	# attr_accessor :lettergues
-	# attr_accessor :finalguess
+attr_reader :secondphrase
+attr_accessor :word, :counter
 
-	def initialize(firstphrase)
-		@firstphrase = firstphrase
-		@arr = @firstphrase.split('')
-		@array2 = (1..@firstphrase.length).to_a
-			@array2.map! do |a|
-				"_"
-			end
-
-
-		@x = 0
-		@secondword = ""
-		@lettergues = ""
-		@finalguess = ""
+	def initialize(word)
+		@word = word.upcase.split("")
+		@usedlettersarray = Array.new(@word.length, "_")
+		@counter = 0
 	end
 
-	def guess(secondphrase)
-		puts "What is the word?"
-		@secondphrase = secondphrase
-		if @secondphrase == @firstphrase
-			puts "you guessed it!"
-			@x = @firstphrase.length
+	def wordguesser(yesorno)
+		"YES" == yesorno.upcase
+	end
+
+
+	def printlettersmethod(letter)
+		@counter  += 1
+			if @word.include?(letter.upcase)
+				@word.each_index do |a|
+					if @word[a] == letter.upcase
+						@usedlettersarray[a] = letter
+					end 
+				end
+			end
+		p @usedlettersarray.join 
+	end
+
+	def endgame(secondphrase)
+		@secondphrase = secondphrase.upcase.split("") 
+		if @secondphrase == @word
+			@counter = @word.length + 1
 		else
-			puts "Sorry nope! Try again"
-		end
-		@secondphrase == @firstphrase
-	end
-
-	def singleletterguess(input)
-
-		@arr.each do |b|
-			if b == input
-				@array2[@arr.index(b)] = b
-				@arr[@arr.index(b)] = 0
-
-			end
-		end
-
-		puts "#{@array2.join}"
-		@array2
-	end
-
-	def santavar(input)
-		@arrayofusedletters = []
-		if @arrayofusedletters.include?(input)
-			@x = @x - 1
-		end
-		@arrayofusedletters << input
-		@x += 1
-	end
-
-	def wordguess
-		puts "Can you guess the letters(If you guess the same letter twice it won't be counted against you)? #{@firstphrase.length - @x} trys available."
-	end
-
-	def finalstatement
-
-
-		if @finalguess == "YES"
-
-			puts "What is the word?"
-
-
-			@secondword = gets.chomp.upcase
-
-			guess(@secondword)
 		end
 	end
-	 
+end
+	
+
+puts "What is the word to be guessed?"
+
+	require 'io/console'#this is a ruby 
+
+	pw = STDIN.noecho(&:gets).chomp #hides the text of what is being typed
+
+	phrase1phase1 = Game.new(pw)
+
+while phrase1phase1.counter < phrase1phase1.word.length
+
+	puts "What is the letter you want to guess?  You have #{phrase1phase1.word.length - phrase1phase1.counter} try(s)."
+
+		letter = gets.chomp
+
+		phrase1phase1.printlettersmethod(letter)
+
+	puts "Are you ready to guess the word?  Then type yes. If you had 0 trys left and do not guess you will lose."
+
+	word_yes_or_no = gets.chomp
+
+	if phrase1phase1.wordguesser(word_yes_or_no)
+
+	puts "What is the word?"
+
+		secondphrase = gets.chomp.upcase
+
+		phrase1phase1.endgame(secondphrase)
+
+	end
 
 end
 
 
+	if phrase1phase1.secondphrase == phrase1phase1.word
+		puts "Congrats!"
+	else
+		puts "Sorry you lost"
+	end
 
+#Driver coder is the view- the thing the user sees.
+#Here it is the questions.
+#running thins, printing things, getting thing user
+# Make it happens
+#
 
-
-
-
-
-puts "what is the word to be guessed?"
-
-require 'io/console'
-
-pw = STDIN.noecho(&:gets).chomp.upcase #hides the text of what is being typed
-
-phrase1phase1 = Game.new(pw)
-
-
-
-while phrase1phase1.x < phrase1phase1.firstphrase.length
-
-	phrase1phase1.wordguess
-
-	phrase1phase1.lettergues = gets.chomp.upcase
-
-	phrase1phase1.singleletterguess(phrase1phase1.lettergues)
-
-
-	phrase1phase1.santavar(phrase1phase1.lettergues)#prints the empty array
-
-	puts "Are you ready to guess? the word?"
-
-
-	# phrase1phase1.wordguess(phrase1phase1.finalguess)
-
-	phrase1phase1.finalguess = gets.chomp.upcase
-
-		# if phrase1phase1.finalguess == "YES"
-
-		# 	puts "What is the word?"
-
-
-		# 	phrase1phase1.secondword = gets.chomp.upcase
-
-		# 	phrase1phase1.guess(phrase1phase1.secondword)
-
-		# else 
-
-		# end
-		phrase1phase1.finalstatement
-
-
-end
-
-
-puts "Thanks for playing."
