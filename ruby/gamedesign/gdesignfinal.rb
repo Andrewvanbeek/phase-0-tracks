@@ -29,6 +29,9 @@ attr_accessor :word, :counter
 
 	def printlettersmethod(letter)
 		@counter  += 1
+		if @usedlettersarray.include?(letter)
+						@counter = @counter - 1
+					end
 			if @word.include?(letter.upcase)
 				@word.each_index do |a|
 					if @word[a] == letter.upcase
@@ -44,6 +47,7 @@ attr_accessor :word, :counter
 		if @secondphrase == @word
 			@counter = @word.length + 1
 		else
+			@counter = @word.length + 1
 		end
 	end
 end
@@ -76,12 +80,10 @@ while phrase1phase1.counter < phrase1phase1.word.length
 		secondphrase = gets.chomp.upcase
 
 		phrase1phase1.endgame(secondphrase)
+	else
 
 	end
-
 end
-
-
 	if phrase1phase1.secondphrase == phrase1phase1.word
 		puts "Congrats!"
 	else

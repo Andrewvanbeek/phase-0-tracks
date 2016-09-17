@@ -18,7 +18,9 @@ end
 
 himethod(coffeeshops) 
 
-new_coffeeshop = coffeeshops.map  do |d| d + "!" end
+new_coffeeshop = coffeeshops.map  do 
+    |d| d + "!" 
+end
 
 p new_coffeeshop
 
@@ -32,11 +34,6 @@ coffebar: "vegan juice"}
 coffeedrinks.each do |coffeeplace, drinkz| puts "#{coffeeplace} is the best coffeeshop and the #{drinkz} is the best drink ever!" end
 
 
-himethod(coffeeshops)
-
-new_coffeeshop = coffeeshops.map  do |d| d + "!" end
-
-p new_coffeeshop
 
 
 coffeedrinks = {starbucks: "Pumpkin Spice",
@@ -63,7 +60,6 @@ array = [1, 2, 3, 4]
 
 p delete_me(array)
 
-end
 
 a = [1, 2, 3, 4]
 
