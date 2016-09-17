@@ -20,33 +20,46 @@ def encryption(string)
 		
 		if string[x] == "z"
 			new_string = new_string + "a"
+		elsif string[x] == " "
+			new_string = new_string + "_"
 		else
 			new_string = new_string + string[x].next
-	end
+		
+		end
 			
 	x += 1
 end
-	puts new_string
-	new_string
+	p new_string
 end
 
 
 def decryption(new_string)
-	alphabet = "abcdefghijklmnopqrstuvwxyz"
+	alphabet = "abcdefghijklmnopqrstuvwxyz _"
 	y = 0
 	newstringd = ""
-	while y < new_string.length
+	# if new_string.include?"_"
+	while y < new_string.length	
 	tochange = alphabet[alphabet.index(new_string[y]) - 1]
 	newstringd = newstringd + tochange
-	puts newstringd
 	y += 1
 	end 
 	
+	p newstringd
 end 
 
 
 
 
-#  output = encryption("abc")
 
- # p decryption(output)
+
+
+ puts "What do you want to encrypt?"
+
+ output = gets.chomp
+
+
+
+ decryption(encryption(output))
+
+
+

@@ -23,6 +23,7 @@ attr_accessor :state, :population, :population_density
   end
 
 
+
 # Responsible for printing both of the statements together, since they don't make sense if they're alone.
   
 
@@ -105,21 +106,35 @@ end
 # DRIVER CODE
  # initialize VirusPredictor for each state
  state_instance_hash = {}
+ newvar = ""
 
-STATE_DATA.each do |state, hashes|
-  state_instance_hash[state] = VirusPredictor.new( state, hashes[:population_density], hashes[:population])
+ p STATE_DATA
+ 
+
+ STATE_DATA.each do |state, hashes|
+   state_instance_hash[state] = VirusPredictor.new( state, hashes[:population_density], hashes[:population])
   state_instance_hash[state].virus_effects
 end
 
-# ObjectSpace.each_object(VirusPredictor) {|x| p x}
+# p ObjectSpace.each_object(VirusPredictor).count 
 
-p state_instance_hash["California"].state
+p state_instance_hash["California"].population_density
 
+  # state_instance_hash.each do |x, y|  #x is the hash key here.  In the state_instance hash x is the key y is the value pair that stores the whole instances.  So to access a particular instance variable of the method i would write the instance which is y here, and then the method or instance varuable that i am trying to call by instance.instancewhatever i am trying to call.
+  #     p x
+  #     p y
 
+  #    end 
+
+# p newvar
+
+p whole_thing
 
 
 # alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population])
 # alabama.virus_effects
+
+
 
 #jersey = VirusPredictor.new("New Jersey", STATE_DATA["New Jersey"][:population_density], STATE_DATA["New Jersey"][:population])
 #jersey.virus_effects
