@@ -12,7 +12,7 @@ reversethename = function (name1)
 
 
 for (var i = 1; i < name.length + 1; i++) {
-	var array = []; array.push((name[name.length - i]));
+	console.log(name[name.length - i]);
 }
 
-console.log(array);
+
