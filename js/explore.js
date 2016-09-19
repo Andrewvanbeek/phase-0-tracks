@@ -8,6 +8,8 @@
 
 var reverse = function(name) { 
   var sum = ""
+  if (name == "robot") {
+	console.log("Robot Party!");}
   for (var i = 1; i <= name.length; i++) {
 	sum = sum + name[name.length - i];}
   
@@ -15,4 +17,4 @@ var reverse = function(name) {
 
 };
 
-reverse("hey");
+reverse("robot");
