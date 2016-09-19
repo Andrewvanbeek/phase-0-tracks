@@ -1,18 +1,18 @@
-// takes the index of var name and passes it through a loop until 
+// Creates a function that takes in name
+// Creates new string sum, which be the sum of all our reverse letters
+// Create a for loop after the string is created
+// The for loop will increment by 1 each time and start and 1, and will continue until i is just equal to
+// every time the loop is run the new string will have the letters of the word passed through in reverse.
 
 
 
+var reverse = function(name) { 
+  var sum = ""
+  for (var i = 1; i <= name.length; i++) {
+	sum = sum + name[name.length - i];}
+  
+  console.log(sum);
 
+};
 
-var name = "hello"
-
-
-reversethename = function (name1)
-{var array = []; array.push(name1);}
-
-
-for (var i = 1; i < name.length + 1; i++) {
-	console.log(name[name.length - i]);
-}
-
-
+reverse("hey");
