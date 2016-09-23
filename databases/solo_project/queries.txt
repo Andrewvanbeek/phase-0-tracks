@@ -1,0 +1,37 @@
+1.SELECT * FROM songs;
+	1|Bigtime|Sad|1
+	2|Heartbeats|uplifting|2
+	3|Lost|Melancholy|3
+
+2. UPDATE songs SET mood="Heartwarming" WHERE song="Heartbeats";
+sqlite> SELECT * FROM songs;
+	1|Bigtime|Sad|1
+	2|Heartbeats|Heartwarming|2
+	3|Lost|Melancholy|3
+
+3.SELECT * FROM songs, instruments WHERE songs.instruments_id = instruments.id;
+	1|Bigtime|Sad|1|1|acoustic
+	2|Heartbeats|Heartwarming|2|2|electronic
+	3|Lost|Melancholy|3|3|acoustic and electronic mix
+
+4.SELECT songs.song, instruments.instruments FROM songs JOIN instruments ON 		songs.instruments_id = instruments.id;
+	Bigtime|acoustic
+	Heartbeats|electronic
+	Lost|acoustic and electronic mix
+
+5. DELETE FROM songs WHERE song="Lost";
+sqlite> SELECT * FROM songs;
+	1|Bigtime|Sad|1
+	2|Heartbeats|Heartwarming|2
+
+6.  SELECT songs.mood, instruments.instruments FROM songs JOIN instruments ON songs.instruments_id = instruments.id;
+	Sad|acoustic
+	Heartwarming|electronic
+
+7.SELECT songs.instruments_id, instruments.instruments FROM songs JOIN instruments ON songs.instruments_id = instruments.id;
+	1|acoustic
+	2|electronic
+
+8.SELECT songs.song, songs.mood, instruments.instruments FROM songs JOIN instruments ON songs.instruments_id = instruments.id;
+	Bigtime|Sad|acoustic
+	Heartbeats|Heartwarming|electronic
