@@ -39,24 +39,37 @@ database = SQLite3::Database.new ("coolplaces.db")
 
 
 create_table_cmd = <<-SQL
-	CREATE TABLE IF NOT EXISTS thing_to_do (
-		id INTEGER PRIMARY KEY,
-		things_to_do VARCHAR(255)
-	)
+  CREATE TABLE IF NOT EXISTS thing_to_do (
+    id INTEGER PRIMARY KEY,
+    things_to_do VARCHAR(255)
+  )
 SQL
 
 
 create_table_cmd1 = <<-SQL
-	CREATE TABLE IF NOT EXISTS places_to_visit (
-		id INTEGER PRIMARY KEY,
-		city_to_visit VARCHAR(255),
-		things_id INT,
-		FOREIGN KEY (things_id) REFERENCES thing_to_do(id)
-	)
+  CREATE TABLE IF NOT EXISTS places_to_visit (
+    id INTEGER PRIMARY KEY,
+    city_to_visit VARCHAR(255),
+    things_id INT,
+    FOREIGN KEY (things_id) REFERENCES thing_to_do(id)
+  )
 SQL
 
-def insertplaces(do_thing)
-		database.execute("INSERT INTO thing_to_do (things_to_do) VALUES (?)", [do_thing])
+def insertplaces(database, do_thing)
+    database.execute("INSERT INTO thing_to_do (things_to_do) VALUES (?)", [do_thing])
+end
+
+def getidint(database)
+  database.execute("SELECT id
+      FROM    thing_to_do
+      WHERE   ID = (SELECT MAX(id)  FROM thing_to_do)
+  ")
+end
+
+def get_things_to_do_in_city(database, othercity)
+  database.execute("SELECT things_to_do FROM places_to_visit
+  JOIN thing_to_do ON places_to_visit.things_id = thing_to_do.id
+  WHERE places_to_visit.city_to_visit = ? ", [othercity])
 end
 
 
@@ -67,37 +80,32 @@ sequence_ender = ""
 
 until sequence_ender == "done"
 
-	puts "What is your favorite city to visit?"
+  puts "What is your favorite city to visit?"
 
-	citytov = gets.chomp.downcase
+  citytov = gets.chomp.downcase
 
-	puts "What is a good thing to do there."
+  puts "What is a good thing to do there."
 
-	do_thing = gets.chomp.downcase
+  do_things = gets.chomp.downcase
 
-	database.execute("INSERT INTO thing_to_do (things_to_do) VALUES (?)", [do_thing])
+ insertplaces(database, do_things)
 
-	idcount = database.execute("SELECT id
-	    FROM    thing_to_do
-	    WHERE   ID = (SELECT MAX(id)  FROM thing_to_do)
-	")
-	database.execute("INSERT INTO places_to_visit (city_to_visit, things_id) VALUES (?, ?)", [citytov, idcount])
+  idcount = getidint(database)
+  database.execute("INSERT INTO places_to_visit (city_to_visit, things_id) VALUES (?, ?)", [citytov, idcount])
 
 
-	puts "Is there any other city you are curious about?  If so write the city name to see what activities are associated with it."
+  puts "Is there any other city you are curious about?  If so write the city name to see what activities are associated with it."
 
-		othercity = gets.chomp.downcase
+    othercitys = gets.chomp.downcase
 
-	othercityfact = database.execute("SELECT things_to_do FROM places_to_visit
-	JOIN thing_to_do ON places_to_visit.things_id = thing_to_do.id
-	WHERE places_to_visit.city_to_visit = ? ", [othercity])
+  othercityfact = get_things_to_do_in_city(database, othercitys)
 
-	puts "Here are the things people have listed to do in that city."
-	puts othercityfact
+  puts "Here are the things people have listed to do in that city."
+  puts othercityfact
 
-	puts "If you are done, simply write done.  If you want to add another city and activity press any key to continue."
+  puts "If you are done, simply write done.  If you want to add another city and activity press any key to continue."
 
-		sequence_ender = gets.chomp.downcase
+    sequence_ender = gets.chomp.downcase
 
 end
 
