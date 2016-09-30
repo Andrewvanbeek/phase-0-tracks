@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>city fight</title>
+    <link rel="stylesheet" type="text/css" href="awesomesace.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+      $("#lasers").toggle();
+    });
+     $("button").click(function(){
+      $("#fire").toggle();
+    });
+
+});
+</script>
+</head>
+<body>
+
+  <button>Make Ultraman destroy the city!</button>
+<img id="ultraman" src="ultraman.png" height="400px" width="400px">
+
+<img id="lasers" class="hidden" src="lasers.png" height="500px" width="500px">
+<img id="fire" class="hidden" src="Realistic-fire-animated-transparent-gif.gif">s
+
+</body>
+</html>
