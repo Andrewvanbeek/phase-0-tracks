@@ -1,0 +1,31 @@
+body {
+background-image: url("download.jpeg"); background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+#ultraman {z-index: -100;
+  position: absolute;
+  margin-top: 30%;
+  margin-left: 100px;
+}
+
+#lasers {z-index: -40;
+position: absolute;  margin-left: 225px; margin-top: 25%;
+}
+
+.hidden
+{display: none;}
+
+button {
+  position: absolute;
+}
+
+#fire {
+  z-index: -30;
+position: absolute;  margin-left: 400px; margin-top: 40%;
+width: auto;
+
+
+
+}
