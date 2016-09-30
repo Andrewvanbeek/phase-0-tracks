@@ -1,6 +1,7 @@
 # require gems
 require 'sinatra'
 require 'sqlite3'
+require 'shotgun'
 
 db = SQLite3::Database.new("students.db")
 db.results_as_hash = true
@@ -9,7 +10,7 @@ db.results_as_hash = true
 # add a query parameter
 # GET /
 get '/' do
-  "#{params[:name]} is #{params[:age]} years old."
+  "#{params[:name]} is #{params[:something]} years old."
 end
 
 # write a GET route with
@@ -43,4 +44,20 @@ end
 get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
+end
+
+# writing a GET route for Contact
+
+get '/contact/' do
+  "1500 Coool Street"
+end
+
+get '/greatjob/:name' do
+  name = params[:name]
+  "Great job #{name}"
+end
+
+get '/addnum/' do
+" #{params[:numone].to_i + params[:numtwo].to_i}"
+
 end
