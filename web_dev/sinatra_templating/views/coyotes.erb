@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>Coyotes</title>
+</head>
+<body>
+  <h1>  The Proud Coyotes of DBC </h1>
+
+  <img src="http://www.desertusa.com/animals/photos2/coyote22.jpg" height=400px width=400px>
+
+<p1> Man we coyotes are so rad.  What a journey.  In fact homeslice write what you liked about dbc below.</p>
+
+<br><br>
+
+  <form action="/coyote" method="POST">
+    <input type="text" name="name" placeholder="Name">
+    <input type="text" name="comment" placeholder="comment goes here">
+    <button type="submit">Save</button>
+  </form>
+
+<br><br><br>
+  <h1>Phase 0 Comments!</h1>
+  <ul>
+    <% @coyotes.each do |coyote| %>
+      <li><%= coyote['name'] %>, <%= coyote['comment'] %></li>
+    <% end %>
+  </ul>
+
+</body>
+</html>
+
