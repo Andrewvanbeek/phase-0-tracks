@@ -1,17 +1,19 @@
 body {
 background-image: url("download.jpeg"); background-repeat: no-repeat;
 background-size: cover;
+min-width:1000px;
+min-height: 1000px;
 
 }
 
 #ultraman {z-index: -100;
   position: absolute;
-  margin-top: 30%;
+  margin-top: 500px;
   margin-left: 100px;
 }
 
 #lasers {z-index: -40;
-position: absolute;  margin-left: 225px; margin-top: 25%;
+position: absolute;  margin-left: 225px; margin-top: 430px;
 }
 
 .hidden
@@ -23,7 +25,7 @@ button {
 
 #fire {
   z-index: -30;
-position: absolute;  margin-left: 400px; margin-top: 40%;
+position: absolute;  margin-left: 400px; margin-top: 650;
 width: auto;
 
 
