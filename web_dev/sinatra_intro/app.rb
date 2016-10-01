@@ -57,7 +57,7 @@ get '/greatjob/:name' do
   "Great job #{name}"
 end
 
-get '/addnum/' do
+get '/addnum/:numone/:numtwo' do
 " #{params[:numone].to_i + params[:numtwo].to_i}"
 
 end
