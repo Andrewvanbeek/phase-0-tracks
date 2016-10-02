@@ -55,7 +55,7 @@ end
 
 # This is my code
 
-get '/greatjob/:name' do
+get '/greatjob' do
   name = params[:name]
   "Great job #{name}"
 end
