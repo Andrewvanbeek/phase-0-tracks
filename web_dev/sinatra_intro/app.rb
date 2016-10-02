@@ -47,15 +47,20 @@ get '/students/:id' do
 end
 
 # writing a GET route for Contact
+#this is my code
 
 get '/contact/' do
   "1500 Coool Street"
 end
 
+# This is my code
+
 get '/greatjob/:name' do
   name = params[:name]
   "Great job #{name}"
 end
+
+# This is my code I added
 
 get '/addnum/:numone/:numtwo' do
 " #{params[:numone].to_i + params[:numtwo].to_i}"
